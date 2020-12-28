@@ -1,0 +1,76 @@
+#lotto-title {
+  font-weight: bold;
+  font-size: 5rem;
+  font-family: 'Yeon Sung', sans-serif;
+}
+#lotto-sub-title {
+  font-size: 3rem;
+  font-family: 'East Sea Dokdo', 'Yeon Sung', sans-serif;
+}
+.lot {
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+.ball {
+  border-radius: 50%;
+  width:8rem;
+  line-height: 8rem;
+  height: 8rem;
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  font-size: 5rem;
+  cursor: default;
+}
+#plus {
+  width:8rem;
+  line-height: 8rem;
+  height: 8rem;
+  color: white;
+  font-size: 5rem;
+}
+#b1:before {
+  content: "";
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+  -webkit-filter: blur(5px);
+  z-index: 2;
+}
+
+#b1 {
+  /* background: radial-gradient(circle at 50% 90%, #e91a30, #0a0a0a 80%, #000000 100%); */
+  /* background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%); */
+  background: radial-gradient(circle at 33% 33%, #e91a30, #000);
+}
+#b2 {
+  background: radial-gradient(circle at 33% 33%, #2438e9, #000);
+}
+#b3 {
+  background: radial-gradient(circle at 33% 33%, greenyellow, #000);
+}
+#b4 {
+  background: radial-gradient(circle at 33% 33%, #be61e9, #000);
+}
+#b5 {
+  background: radial-gradient(circle at 33% 33%, #e9e755, #000);
+}
+#b6 {
+  background: radial-gradient(circle at 33% 33%, #2abae9, #000);
+}
+#b7 {
+  /* #07111f */
+  background: radial-gradient(circle at 33% 33%, #48787D, #000);
+}
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
