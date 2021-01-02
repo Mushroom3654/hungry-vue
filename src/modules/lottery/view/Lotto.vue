@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from '@/store/lotto/store'
-import * as types from '@/store/lotto/types'
+import { mapActions, mapGetters } from '../store/lotto/store'
+import * as types from '../store/lotto/types'
 import '@/css/lotto.css'
 import '@/css/lotto.scss'
 
@@ -53,7 +53,7 @@ export default {
         if (i === 7) {
           clearInterval(result)
           clearInterval(timer)
-          this.$firebase.set({lotto: this.winning})
+          this.$firebase.child('lotto').set(this.winning)
         }
         this.winning[i] = this.state
         this.saveResult({i: i, d: this.state})

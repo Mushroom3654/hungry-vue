@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import Drawer from '../components/Drawer'
+import Drawer from '../../../components/Drawer'
 
 export default {
-  name: 'CanvasDraw.vue',
+  name: 'CanvasDraw',
 
   components: {
     drawer: Drawer

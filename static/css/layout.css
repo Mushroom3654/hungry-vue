@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap');
+
+.header {position:absolute;z-index:30;top:0;left:0;width:100%;}
+.header .header-description h1 {opacity: 0}
+.header-nav {position:fixed;top:0;left:0;width:100%;}
+.header-nav-inner {position:relative;display:flex;justify-content: space-between;padding:1rem}
+.header-title { font-size: 1.5rem; text-decoration: none !important; cursor:default; color:#f1f1f1;}
+.header-title:hover {color: #f1f1f1}
+
+.main {height: 100vh; background: #1A1A1D;padding: 20px 10px;overflow-x:hidden}
+
+.btn-hamburger {color: white}
+/*.btn-hamburger {width: 40px;height:50px;}*/
+/*.btn-hamburger line {display:block;background-color: #fff;padding:1px;}*/
+/*.btn-hamburger line:first-child {margin-bottom: 9px;}*/
+/*.btn-hamburger line:last-child {margin-top: 9px;}*/
+/*.btn-hamburger:hover{cursor:pointer}*/
+/*.btn-hamburger.hover line:first-child {transform: rotate(45deg); transition: 0.5s;}*/
+/*.btn-hamburger.hover line:nth-child(2) {display: none; transition: 0.5s}*/
+/*.btn-hamburger.hover line:last-child {transform: rotate(-45deg); transition: 0.5s}*/
+
+.sidebar {position:fixed;top:0;right:0;height:100%;width:0;background-color:#111;padding:20px 0;overflow-x: hidden;z-index:9995;transition: 0.5s;}
+.sidebar.active {width:250px;padding:20px;}
+.sidebar a:hover { color: #f1f1f1; }
+.sidebar a { padding: 8px; text-decoration: none; font-size: 25px; color: #818181; display: block; transition: 0.5s; text-align: left}
+.sidebar .btn-side-close {text-align: right;padding:0;line-height: 0;margin-bottom:30px}
+.sidebar .router-link-active span{color: #1A73E8 !important;}
+.sidebar .btn-toggle { position: absolute; top: 0; right: 25px; font-size: 36px; margin-left: 50px; }

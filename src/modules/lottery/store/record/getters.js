@@ -1,6 +1,6 @@
 import * as types from './types'
 
 export default {
-  [types.RESULT]: state => state.result,
+  [types.RECORD]: state => state.record,
   [types.FIELDS]: state => state.fields
 }

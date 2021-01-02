@@ -43,8 +43,8 @@
 </template>
 
 <script>
-import DatePicker from '../components/datepicker/DatePicker'
-import util from '../vue/util'
+import DatePicker from '../../../components/datepicker/DatePicker'
+import util from '../../../vue/util'
 
 export default {
   name: 'Test',
