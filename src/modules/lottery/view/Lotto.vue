@@ -18,8 +18,8 @@
 <script>
 import { mapActions, mapGetters } from '../store/lotto/store'
 import * as types from '../store/lotto/types'
-import '@/css/lotto.css'
-import '@/css/lotto.scss'
+import '@/../static/css/lotto.css'
+import '@/../static/css/lotto.scss'
 
 export default {
   name: 'Lotto',

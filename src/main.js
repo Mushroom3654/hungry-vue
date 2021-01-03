@@ -15,6 +15,7 @@ import 'firebase/auth'
 import firebaseSetting from './vue/firebaseSetting'
 
 import '../static/css/layout.css'
+import '../static/css/style.css'
 import '../static/css/app.css'
 
 import './components/components'
@@ -32,8 +33,9 @@ firebase.initializeApp(firebaseSetting)
 Vue.use(firebasePlugin)
 
 router.beforeEach((to, from, next) => {
-  if (!to.name) next({name: 'Main'})
-  else next()
+  if (!to.name) return next({name: 'Main'})
+  if (to.name === 'TimeLine') return next({name: 'Prepared'})
+  next()
 })
 
 /* eslint-disable no-new */

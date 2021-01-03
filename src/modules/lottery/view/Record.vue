@@ -1,12 +1,12 @@
 <template>
-  <div id="record" class="routerView px-2 pt-2">
+  <div class="record routerView">
     <h3>당첨기록</h3>
     <div class="mb-1" v-if="!row">
       <input type="file" @change="readExcel" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
     </div>
     <!-- <div>{{record}}</div> -->
     <div>
-      <b-table id="tb" class="mb-1" :items="record" :fields="fields" :per-page="perPage" :current-page="currentPage" head-variant="light" table-variant="dark" hover outlined></b-table>
+      <b-table class="table mb-1" :items="record" :fields="fields" :per-page="perPage" :current-page="currentPage" head-variant="light" table-variant="dark" hover outlined></b-table>
       <b-spinner class="spinner" variant="primary" v-if="!row"></b-spinner>
       <div v-if="row" class="d-flex justify-content-between mb-0">
         <b-pagination size="sm" v-model="currentPage" :total-rows="row" :per-page="perPage" aria-controls="tb" align="right"></b-pagination>
@@ -94,20 +94,7 @@ export default {
 </script>
 
 <style lang="css" scoped>
-  h3 {
-    color:white
-  }
-  .table {
-    color: white
-  }
-  label {
-    color: white;
-    font-weight: bold;
-  }
-  .spinner {
-    position: absolute;
-    z-index: 999;
-    top: 50%;
-    left: 50%;
-  }
+  .table, h3, label { color:white }
+  .table td, .table th {padding:0 !important;margin:0}
+  .spinner { position: absolute; z-index: 999; top: 50%; left: 50%; }
 </style>

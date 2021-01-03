@@ -1,0 +1,45 @@
+.main-title {margin-bottom: 50px;color:#D9730D}
+.main-introduce {width:70%;margin:0 auto}
+.main-introduce p {width:50%;margin:0 auto;text-align: left}
+
+.main-myPic {width: 130px;height: 150px;border-radius: 50%;margin:40px auto;background: url(/static/image/myPic.jpg) no-repeat 70% 10%;}
+
+.project-header {margin-bottom: 20px; border-bottom: 2px solid #d9730d}
+.project-title {text-align: left;color: #D9730D}
+.project-link {margin-top:20px}
+
+.carousel-caption {width:87%;height: 100%;z-index:1;bottom:0;}
+.card {width:80%;height: 100%;}
+.card {background: #1A1A1D}
+
+.card h2, .card h4, .card h3, .card h5, .card h6 {text-align: left;word-break: break-all}
+.card h2, .card h5 {margin-bottom: 20px;}
+.card-text-area {margin:0 auto}
+.card-text-area h3 {line-height: 50px}
+.card-text-area {padding: 0 60px 0 60px}
+.card-text-area-title {margin-bottom: 30px}
+
+.duce-img {background: url(/static/image/image-duce.png) no-repeat 50% 50%;background-size:contain;width:100%;height:100%}
+.araboza-img-1 {background: url(/static/image/image-araboza-1.png) no-repeat 10% 10%;background-size:contain;width:300px;height:500px}
+.araboza-img-2 {background: url(/static/image/image-araboza-2.png) no-repeat 10% 10%;background-size:contain;width:300px;height:500px}
+
+.project-time-line::-webkit-scrollbar { display: none; }
+.project-time-line {
+  position:fixed;bottom:10px;width:100%;z-index:999;overflow-x:scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.project-time-line-body {display:flex;margin: 0 10px }
+.project-time-line-item {z-index: 995;bottom:22px;cursor:pointer;transform: translate(0, 50%);transition: .5s ease}
+.project-time-line-item span {font-weight: bold}
+.project-time-line-item:hover {transform: translate(0, 20%)}
+.project-time-line-item:not(:first-child) {margin-left:20px}
+.project-time-line-item {background: #D9730D;min-width: 80px; height:100px;border-radius: 10%}
+
+.project-time-line-footer {z-index:999;bottom:20px;width:100%;}
+.project-time-line-footer .time-line {width:100%;height:2px;background: #D9730D;}
+
+.left-right {display: flex}
+
+.left-right {display: flex}

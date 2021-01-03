@@ -134,9 +134,8 @@ export default {
 </script>
 
 <style scoped>
-  .test-page {padding:30px 0}
-  .test-page h4, span, label {color:#f1f1f1}
-  .test-page .section {width:80%;border: 1px solid #f1f1f1;padding:10px;margin:10px auto;text-align: left}
+  /*.test-page {padding:30px 0}*/
+  .test-page .section {width:100%;border: 1px solid #f1f1f1;padding:10px;margin:10px auto;text-align: left}
   .temp_table th, td {border:1px solid #f1f1f1}
   .temp_table th {background: lightblue}
   .temp_table th:first-child {padding: 2px 20px}

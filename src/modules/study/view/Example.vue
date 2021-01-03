@@ -1,5 +1,5 @@
 <template>
-  <div id="example" class="routerView pt-5">
+  <div class="example routerView pt-5">
     <!-- 보간법 -->
     <h1 v-html="'보간법 {{ state }}'"></h1>
     <h2>{{ msg }}</h2>
@@ -123,12 +123,7 @@ export default {
 </script>
 
 <style>
-#example {
-  background: white
-}
-#example label, p {
-  font-size: 2rem
-}
+.example label, p, h1, h2, h3 { color:#f1f1f1;font-size: 2rem }
 .balls:hover {
   transition: 0.5s;
   height:6rem !important;

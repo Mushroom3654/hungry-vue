@@ -7,13 +7,27 @@
         <line x1="6" y1="6" x2="18" y2="18"></line>
       </svg>
     </a>
-    <router-link :class="{'active': $route.name === 'Portfolio'}" :to="{name: 'Portfolio'}"><span>Portfolio</span></router-link>
-    <router-link :class="{'active': $route.name === 'Record'}" :to="{name: 'Record'}"><span>Record</span></router-link>
-    <router-link :class="{'active': $route.name === 'Lotto'}" :to="{name: 'Lotto'}"><span>Lotto</span></router-link>
-    <router-link :class="{'active': $route.name === 'Example'}" :to="{name: 'Example'}"><span>Example</span></router-link>
-    <router-link :class="{'active': $route.name === 'Map'}" :to="{name: 'Map'}"><span>Map</span></router-link>
-    <router-link :class="{'active': $route.name === 'Test'}" :to="{name: 'Test'}"><span>Test</span></router-link>
-    <router-link :class="{'active': $route.name === 'CanvasDraw'}" :to="{name: 'CanvasDraw'}"><span>Drawer</span></router-link>
+<!--    <div class="dept-portfolio dept-1">-->
+<!--      <router-link :class="{'active': $route.name === 'Portfolio'}" :to="{name: 'Portfolio'}"><span>Portfolio</span></router-link>-->
+<!--    </div>-->
+    <div class="dept-study dept-1">
+      <div class="dept-title" @click="toggleDept1">Portfolio<a class="dept-toggle"></a></div>
+      <div class="dept-study-list dept-1-list">
+        <div class="dept-1-item"><router-link :class="{'active': $route.name === 'Portfolio'}" :to="{name: 'Portfolio'}"><span>Project</span></router-link></div>
+<!--        <div class="dept-1-item"><router-link :class="{'active': $route.name === 'TimeLine'}" :to="{name: 'TimeLine'}"><span>TimeLine</span></router-link></div>-->
+      </div>
+    </div>
+    <div class="dept-study dept-1">
+      <div class="dept-title" @click="toggleDept1">Study<a class="dept-toggle"></a></div>
+      <div class="dept-study-list dept-1-list">
+        <div class="dept-1-item"><router-link :class="{'active': $route.name === 'Record'}" :to="{name: 'Record'}"><span>Record</span></router-link></div>
+        <div class="dept-1-item"><router-link :class="{'active': $route.name === 'Lotto'}" :to="{name: 'Lotto'}"><span>Lotto</span></router-link></div>
+        <div class="dept-1-item"><router-link :class="{'active': $route.name === 'Example'}" :to="{name: 'Example'}"><span>Example</span></router-link></div>
+        <div class="dept-1-item"><router-link :class="{'active': $route.name === 'Map'}" :to="{name: 'Map'}"><span>Map</span></router-link></div>
+        <div class="dept-1-item"><router-link :class="{'active': $route.name === 'Test'}" :to="{name: 'Test'}"><span>Test</span></router-link></div>
+        <div class="dept-1-item"><router-link :class="{'active': $route.name === 'CanvasDraw'}" :to="{name: 'CanvasDraw'}"><span>Drawer</span></router-link></div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -32,7 +46,14 @@ export default {
   methods: {
     closeSidebar () {
       document.querySelector('.sidebar').classList.remove('active')
-      document.getElementsByClassName('btn-hamburger')[0].classList.remove('hover')
+    },
+
+    toggleDept1 (e) {
+      let parent = e.target.parentElement
+      if (parent.classList.contains('active')) {
+        return parent.classList.remove('active')
+      }
+      parent.classList.add('active')
     }
   }
 }
