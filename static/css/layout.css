@@ -3,7 +3,12 @@
 
 h1, h2, h3, h4, h5, h6, p, span, label {color: #f1f1f1}
 ul, li { list-style: none; margin: 0; padding: 0;}
-p {font-size: 1.2rem}
+p, h6, label {font-size: 1rem !important;}
+h5 {font-size: 1.3rem}
+h4 {font-size: 1.4rem}
+h3 {font-size: 1.7rem}
+h2 {font-size: 2rem}
+h1 {font-size: 2.3rem}
 
 /* header */
 .header {position:absolute;z-index:30;top:0;left:0;width:100%;}

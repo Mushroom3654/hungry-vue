@@ -2,7 +2,7 @@
   <div id="app">
     <Header/>
     <side-bar/>
-    <div class="main">
+    <div class="main" v-scroll>
       <router-view/>
     </div>
 <!--    <Footer/>-->

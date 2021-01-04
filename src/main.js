@@ -19,6 +19,7 @@ import '../static/css/style.css'
 import '../static/css/app.css'
 
 import './components/components'
+import './vue/directive'
 
 import firebasePlugin from './vue/firebasePlugin'
 
