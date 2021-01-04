@@ -3,7 +3,7 @@
     <div class="project-header">
       <h1 class="project-title">Project Experience</h1>
     </div>
-    <div class="project-content">
+    <div class="project-body">
 <!--      <component :is="currentProject"/>-->
       <duce v-if="projectPage === 'DUCE'"/>
       <araboza v-if="projectPage === 'ARABOZA'"/>
