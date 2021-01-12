@@ -1,5 +1,18 @@
 import Vue from 'vue'
 import debounce from 'lodash/debounce'
+// const isSupportIntersectionObserver = 'IntersectionObserver' in window
+//
+// const intersectionObserver = isSupportIntersectionObserver
+//   ? new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         const imageURL = entry.target.getAttribute('~~')
+//         if (!imageURL.length) return
+//         entry.target.style.backgroundImage = imageURL
+//         observer.unobserve(entry.target)
+//       }
+//     })
+//   }) : null
 
 Vue.directive('scroll', {
   bind (el, binding, node) {
