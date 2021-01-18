@@ -19,7 +19,6 @@
 import { mapActions, mapGetters } from '../store/lotto/store'
 import * as types from '../store/lotto/types'
 import '@/../static/css/lotto.css'
-import '@/../static/css/lotto.scss'
 
 export default {
   name: 'Lotto',

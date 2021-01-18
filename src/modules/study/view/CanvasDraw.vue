@@ -4,22 +4,23 @@
 
     </div>
     <div class="content-area">
-      <drawer @getImage="getImage"/>
+      <kb-canvas ref="canvas"/>
     </div>
     <div class="bottom-btnArea">
-      <button class="btn blue" @click="downloadImage">이미지 다운로드</button>
+      <button class="btn blue" @click="download">이미지 다운로드</button>
+      <button class="btn blue" @click="clearCanvas">초기화</button>
     </div>
   </div>
 </template>
 
 <script>
-import Drawer from '../../../components/Drawer'
+import Canvas from '../../../components/canvas/Canvas'
 
 export default {
   name: 'CanvasDraw',
 
   components: {
-    drawer: Drawer
+    kbCanvas: Canvas
   },
 
   data () {
@@ -29,15 +30,12 @@ export default {
   },
 
   methods: {
-    getImage (img) {
-      this.img = img
+    download () {
+      this.$refs.canvas.download()
     },
 
-    downloadImage () {
-      let a = document.createElement('a')
-      a.href = this.img
-      a.download = 'draw_image'
-      a.click()
+    clearCanvas () {
+      this.$refs.canvas.clearCanvas()
     },
 
     convertToBase64 (img) {
@@ -54,7 +52,6 @@ export default {
 </script>
 
 <style scoped>
-.content-area{height:60%}
 .bottom-btnArea {text-align: left;margin:10px}
 .btn.blue{padding:15px;border:1px solid #48cae4;background: #48cae4;color:white}
 .btn.blue:hover{background: #0077b6;}

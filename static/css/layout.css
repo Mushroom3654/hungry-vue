@@ -50,19 +50,19 @@ h1 {font-size: 2.3rem}
 .dept-1 .dept-1-list { height:0;transition: all .5s ease-in-out;}
 .dept-1.active .dept-1-list { height:100%}
 .dept-1.active .dept-1-item{opacity:1;transform: translate(100%, 0)}
-.dept-1 .dept-1-item:nth-child(1) { animation: 1s dept-close ease-in-out;animation-fill-mode: forwards}
-.dept-1 .dept-1-item:nth-child(2) { animation: 1s dept-close .1s ease-in-out;animation-fill-mode: forwards}
-.dept-1 .dept-1-item:nth-child(3) { animation: 1s dept-close .3s ease-in-out;animation-fill-mode: forwards}
-.dept-1 .dept-1-item:nth-child(4) { animation: 1s dept-close .5s ease-in-out;animation-fill-mode: forwards}
-.dept-1 .dept-1-item:nth-child(5) { animation: 1s dept-close .7s ease-in-out;animation-fill-mode: forwards}
-.dept-1 .dept-1-item:nth-child(6) { animation: 1s dept-close .9s ease-in-out;animation-fill-mode: forwards}
+.dept-1 .dept-1-item:nth-child(1) { animation: .5s dept-close ease-in-out;animation-fill-mode: forwards}
+.dept-1 .dept-1-item:nth-child(2) { animation: .5s dept-close .1s ease-in-out;animation-fill-mode: forwards}
+.dept-1 .dept-1-item:nth-child(3) { animation: .5s dept-close .3s ease-in-out;animation-fill-mode: forwards}
+.dept-1 .dept-1-item:nth-child(4) { animation: .5s dept-close .5s ease-in-out;animation-fill-mode: forwards}
+.dept-1 .dept-1-item:nth-child(5) { animation: .5s dept-close .7s ease-in-out;animation-fill-mode: forwards}
+.dept-1 .dept-1-item:nth-child(6) { animation: .5s dept-close .9s ease-in-out;animation-fill-mode: forwards}
 
-.dept-1.active .dept-1-item:nth-child(1) {animation: 1s dept-expand ease-in-out;animation-fill-mode: forwards}
-.dept-1.active .dept-1-item:nth-child(2) {animation: 1s dept-expand .1s ease-in-out;animation-fill-mode: forwards}
-.dept-1.active .dept-1-item:nth-child(3) {animation: 1s dept-expand .3s ease-in-out;animation-fill-mode: forwards}
-.dept-1.active .dept-1-item:nth-child(4) {animation: 1s dept-expand .5s ease-in-out;animation-fill-mode: forwards}
-.dept-1.active .dept-1-item:nth-child(5) {animation: 1s dept-expand .7s ease-in-out;animation-fill-mode: forwards}
-.dept-1.active .dept-1-item:nth-child(6) {animation: 1s dept-expand .9s ease-in-out;animation-fill-mode: forwards}
+.dept-1.active .dept-1-item:nth-child(1) {animation: .5s dept-expand ease-in-out;animation-fill-mode: forwards}
+.dept-1.active .dept-1-item:nth-child(2) {animation: .5s dept-expand .1s ease-in-out;animation-fill-mode: forwards}
+.dept-1.active .dept-1-item:nth-child(3) {animation: .5s dept-expand .3s ease-in-out;animation-fill-mode: forwards}
+.dept-1.active .dept-1-item:nth-child(4) {animation: .5s dept-expand .5s ease-in-out;animation-fill-mode: forwards}
+.dept-1.active .dept-1-item:nth-child(5) {animation: .5s dept-expand .7s ease-in-out;animation-fill-mode: forwards}
+.dept-1.active .dept-1-item:nth-child(6) {animation: .5s dept-expand .9s ease-in-out;animation-fill-mode: forwards}
 
 .dept-1 .dept-1-item .active:before {content: '- ';color: #D9730D}
 .dept-1 .active:before {content: '- ';color: #D9730D}
