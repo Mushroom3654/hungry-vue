@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style scoped>
-.bottom-btnArea {text-align: left;margin:10px}
+.bottom-btnArea {text-align: left;margin:10px;}
 .btn.blue{padding:15px;border:1px solid #48cae4;background: #48cae4;color:white}
 .btn.blue:hover{background: #0077b6;}
 </style>

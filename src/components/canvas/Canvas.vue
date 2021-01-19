@@ -1,12 +1,14 @@
 <template lang="html">
   <div class="canvas-wrap">
-    <tab
+    <tab class="tab"
       @setLineWidth="setLineWidth"
       @setLineCap="setLineCap"
       @setStrokeStyle="setStrokeStyle"
       @fillCanvas="fillCanvas"
     />
-    <canvas id="canvas"></canvas>
+    <div class="canvas-area">
+      <canvas id="canvas"></canvas>
+    </div>
   </div>
 </template>
 
@@ -159,7 +161,7 @@ export default {
     },
 
     fillCanvas () {
-      this.ctx.fillRect(0, 0, 300, 400)
+      this.ctx.fill()
     },
     // Util Event
     getImage () {
@@ -225,6 +227,8 @@ export default {
 </script>
 
 <style scoped>
-.canvas-wrap {margin:0 auto;background: white;height:500px}
-#canvas {z-index: 3;width:100%;height:100%}
+.canvas-wrap {margin:0 auto;background: white;height:80vh}
+.tab {width:100%;}
+.canvas-area {width:100%;height: calc(100% - 60px);}
+#canvas {}
 </style>
