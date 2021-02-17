@@ -35,9 +35,21 @@
       <h4>달력</h4>
       <div class="test-content">
         <datepicker ref="dp" v-model="date"/>
-        <input type="text" v-model="date" />
+        <input type="text" v-model="date"/>
         <button @click="$refs.dp.open()">달력</button>
       </div>
+    </section>
+    <section class="section slot">
+      <h4>슬롯</h4>
+      <ts>
+        <div slot="title">Parent Title</div>
+        <div slot="content" @click="clickEv">Parent Content</div>
+        <div slot="scope" slot-scope="scopeProps">
+          {{ slotData.scope }}
+          <div>scopeProps: {{ scopeProps }}</div>
+          <div class="comment">scopeProps는 부모 컴포넌트에서 자식 컴포넌트로 넘어가는 데이터가 아닌 <br> 자식에서 부모로 전달하는 데이터</div>
+        </div>
+      </ts>
     </section>
   </div>
 </template>
@@ -50,7 +62,8 @@ export default {
   name: 'Test',
 
   components: {
-    datepicker: DatePicker
+    datepicker: DatePicker,
+    ts: () => import('../components/TestSlot')
   },
 
   data () {
@@ -66,7 +79,12 @@ export default {
         btnPerPage: 5
       },
       items: [],
-      date: util.getToday()
+      date: util.getToday(),
+      slotData: {
+        title: 'Parent Title',
+        content: 'Parent Content',
+        scope: 'Parent Scope'
+      }
     }
   },
 
@@ -106,10 +124,10 @@ export default {
     createRandomData () {
       this.items = []
       let count = Math.floor(Math.random() * 99) + 1
-      for (let i = 0; i < count; i++) {
+      for (let i = 1; i < count; i++) {
         this.items.push({ name: this.createName(), age: Math.floor(Math.random() * 99) + 1 })
       }
-      console.table(this.items)
+      console.log('Data Size : ', this.items.length)
       this.page.totalRowCount = this.items.length
     },
 
@@ -128,6 +146,10 @@ export default {
 
     focusOn (ref) {
       this.$refs[ref].focus()
+    },
+
+    clickEv () {
+      console.log('Click in Test')
     }
   }
 }
@@ -137,8 +159,10 @@ export default {
   /*.test-page {padding:30px 0}*/
   .test-page .section {width:100%;border: 1px solid #f1f1f1;padding:10px;margin:10px auto;text-align: left}
   .temp_table th, td {border:1px solid #f1f1f1}
-  .temp_table th {background: lightblue}
+  .temp_table th {color: #d9730d;background: wheat}
   .temp_table th:first-child {padding: 2px 20px}
   .temp_table th:last-child {padding: 2px 10px}
-  .temp_table td {padding: 2px;background: seashell;text-align: center}
+  .temp_table td {padding: 2px;text-align: center}
+  .comment:before {content: '*  ';color: #ff1493}
+  .comment {margin-top: 10px}
 </style>

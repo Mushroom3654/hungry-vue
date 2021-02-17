@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap');
 @import url('https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap');
 
-h1, h2, h3, h4, h5, h6, p, span, label {color: #f1f1f1}
+h1, h2, h3, h4, h5, h6, p, span, label, div {color: #f1f1f1}
 ul, li { list-style: none; margin: 0; padding: 0;}
 p, h6, label {font-size: 1rem !important;}
 h5 {font-size: 1.3rem}
