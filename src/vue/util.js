@@ -3,10 +3,8 @@ export default {
     return `${new Date().getFullYear()}-${new Date().getMonth() > 9 ? new Date().getMonth() + 1 : '0' + (new Date().getMonth() + 1)}-${new Date().getDate()}`
   },
 
-  getStartDayOfMonth (date) {
-    if (!date) return
-    if (date.constructor === String) return `${date.slice(0, 4)}-${date.slice(5, 7)}-01`
-    return `${date.getFullYear()}-${this.fixNumberBelowTen(date.getMonth() + 1)}-01`
+  getStartDayOfMonth () {
+    return `${new Date().getFullYear()}-${this.fixNumberBelowTen(new Date().getMonth() + 1)}-01`
   },
 
   getDay (date) {
@@ -15,13 +13,15 @@ export default {
       return week[new Date(date).getDay()]
     }
     return week[date.getDay()]
+    // return new Intl.DateTimeFormat('ko-KR', {weekday: 'long'}).format(date ? new Date(date) : new Date()).slice(0, 1)
   },
 
-  getLastDayOfMonth (date) {
-    let d = date ? new Date(date) : new Date()
-    let year = d.getFullYear()
-    let month = d.getMonth() + 1
-    return new Date(year, month, 0).getDate()
+  getLastDayOfMonth () {
+    // let d = date ? new Date(date) : new Date()
+    // let year = d.getFullYear()
+    // let month = d.getMonth() + 1
+    // return new Date(year, month, 0).getDate()
+    return `${new Date().getFullYear()}-${this.fixNumberBelowTen(new Date().getMonth() + 1)}-${new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate()}`
   },
 
   fixNumberBelowTen (value) {
