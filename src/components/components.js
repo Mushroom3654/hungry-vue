@@ -54,47 +54,56 @@ Vue.component('k-pagination', {
 
   methods: {
     movePage (pageNum) {
-      this.removeActiveClass(this.currentPage)
-      this.addActiveClass(pageNum)
+      if (pageNum === this.currentPage) return
+      this.changeActiveClass(this.currentPage, pageNum)
       this.$emit('input', pageNum)
     },
 
     movePrevPage () {
       if (this.currentPage === 1) return
-      this.removeActiveClass(this.currentPage)
-      this.addActiveClass(this.currentPage - 1)
-      this.$emit('input', this.currentPage - 1)
+      this.movePage(this.currentPage - 1)
     },
 
     moveNextPage () {
       if (this.currentPage === this.pageCount.length) return
-      this.removeActiveClass(this.currentPage)
-      this.addActiveClass(this.currentPage + 1)
-      this.$emit('input', this.currentPage + 1)
+      this.movePage(this.currentPage + 1)
     },
 
     moveFirstPage () {
       if (this.currentPage === 1) return
-      this.removeActiveClass(this.currentPage)
-      this.addActiveClass(1)
-      this.$emit('input', 1)
+      this.movePage(1)
     },
 
     moveLastPage () {
       if (this.currentPage === this.pageCount.length) return
-      this.removeActiveClass(this.currentPage)
-      this.addActiveClass(this.pageCount.length)
-      this.$emit('input', this.pageCount.length)
+      this.movePage(this.pageCount.length)
+    },
+
+    changeActiveClass (removePage, addPage) {
+      this.removeActiveClass(removePage)
+      this.addActiveClass(addPage)
     },
 
     addActiveClass (pageNum) {
       setTimeout(() => {
+        if (!document.getElementsByClassName('btn-num')[(pageNum - 1) % this.btnPerPage]) return
         document.getElementsByClassName('btn-num')[(pageNum - 1) % this.btnPerPage].classList.add('active')
-      }, 25)
+      }, 20)
     },
 
     removeActiveClass (pageNum) {
+      if (!document.getElementsByClassName('btn-num')[(pageNum - 1) % this.btnPerPage]) return
       document.getElementsByClassName('btn-num')[(pageNum - 1) % this.btnPerPage].classList.remove('active')
+    },
+
+    removeAllActiveClass () {
+      let active = document.querySelector('.btn-num.active')
+      if (active) active.classList.remove('active')
+    },
+
+    activeFirstPage () {
+      this.removeAllActiveClass()
+      this.addActiveClass(1)
     }
   }
 })
